@@ -14,13 +14,13 @@ const ApplicationCommand: IApplicationCommandData = {
       }
     ],
     contexts: [
-        InteractionContextType.Guild,
-        InteractionContextType.BotDM,
-        InteractionContextType.PrivateChannel
+      InteractionContextType.Guild,
+      InteractionContextType.BotDM,
+      InteractionContextType.PrivateChannel
     ],
     integration_types: [
-        ApplicationIntegrationType.GuildInstall,
-        ApplicationIntegrationType.UserInstall
+      ApplicationIntegrationType.GuildInstall,
+      ApplicationIntegrationType.UserInstall
     ]
   },
   code: `

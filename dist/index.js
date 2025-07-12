@@ -57,6 +57,7 @@ const client = new forgescript_1.ForgeClient({
         "Guilds",
         "GuildMessages",
         "GuildMembers",
+        "MessageContent",
         "DirectMessages",
         "DirectMessageReactions",
         "DirectMessageTyping",
@@ -74,7 +75,9 @@ const client = new forgescript_1.ForgeClient({
     ],
 });
 forge_db_1.ForgeDB.variables(require("../variables.json"));
+client.functions.load("dist/functions");
+client.commands.load("dist/commands");
 client.applicationCommands.load("dist/slash");
 client.login(process.env.TOKEN);
-console.log("Ready on client ForgeBot!");
+console.log("Logged in!");
 //# sourceMappingURL=index.js.map

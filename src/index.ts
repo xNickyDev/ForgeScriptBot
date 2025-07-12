@@ -25,6 +25,7 @@ const client: ForgeClient = new ForgeClient({
         "Guilds",
         "GuildMessages",
         "GuildMembers",
+        "MessageContent",
         "DirectMessages",
         "DirectMessageReactions",
         "DirectMessageTyping",
@@ -44,11 +45,11 @@ const client: ForgeClient = new ForgeClient({
 
 ForgeDB.variables(require("../variables.json"))
 
-// client.functions.load("dist/functions")
+client.functions.load("dist/functions")
 
 // db.commands.load("dist/database")
-// client.commands.load("dist/commands")
+client.commands.load("dist/commands")
 client.applicationCommands.load("dist/slash")
 
 client.login(process.env.TOKEN)
-console.log("Ready on client ForgeBot!")
+console.log("Logged in!")
