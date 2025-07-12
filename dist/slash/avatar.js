@@ -38,7 +38,7 @@ const ApplicationCommand = {
     $addTextDisplay[-# Made with love by BotForge Team <3]
     $addSeparator[Large]
     $addActionRow
-    $if[$includes[$get[avatar];.gif];
+    $if[$get[ext]==.gif;
       $addButton[$get[avatar];GIF;Link]
     ]
     $addButton[$replace[$get[avatar];$get[ext];.png];PNG;Link]
