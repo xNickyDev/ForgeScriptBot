@@ -16,9 +16,7 @@ const ApplicationCommand = {
             discord_js_1.ApplicationIntegrationType.UserInstall
         ]
     },
-    code: `
-  Pong! $pingms
-  `
+    code: `Pong! $pingms`
 };
 exports.default = ApplicationCommand;
 //# sourceMappingURL=ping.js.map

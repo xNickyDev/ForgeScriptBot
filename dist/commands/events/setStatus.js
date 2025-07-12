@@ -4,8 +4,6 @@ const Command = {
     type: "ready",
     code: `
   $jsonLoad[statuses;$readFile[data/statuses.json]]
-
-  $logger[Info;Ready on client ForgeBot!]
   $setStatus[online;Custom;$eval[$env[statuses;0];false]]
   
   $let[n;1]

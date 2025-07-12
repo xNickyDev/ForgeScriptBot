@@ -16,9 +16,7 @@ const ApplicationCommand: IApplicationCommandData = {
       ApplicationIntegrationType.UserInstall
     ]
   },
-  code: `
-  Pong! $pingms
-  `
+  code: `Pong! $pingms`
 }
 
 export default ApplicationCommand

@@ -74,6 +74,10 @@ const client = new forgescript_1.ForgeClient({
         db
     ],
 });
+client.commands.add({
+    type: "ready",
+    code: `$logger[Info;Ready on client ForgeBot!]`
+});
 forge_db_1.ForgeDB.variables(require("../variables.json"));
 client.functions.load("dist/functions");
 client.commands.load("dist/commands");

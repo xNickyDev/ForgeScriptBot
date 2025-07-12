@@ -43,6 +43,11 @@ const client: ForgeClient = new ForgeClient({
     ],
 })
 
+client.commands.add({
+    type: "ready",
+    code: `$logger[Info;Ready on client ForgeBot!]`
+})
+
 ForgeDB.variables(require("../variables.json"))
 
 client.functions.load("dist/functions")
