@@ -5,14 +5,12 @@ const Command: IBaseCommand<CommandType> = {
   allowedInteractionTypes: ["autocomplete"],
   code: `
   $onlyIf[$focusedOptionName==package]
-  
-  $onlyIf[$httpRequest[$api[packages];GET]==200]
-  $jsonLoad[data;$httpResult[data]]
+  $jsonLoad[packages;$getGlobalVar[packages]]
   
   $let[n;0]
   $let[i;0]
-  $while[$and[$get[n]<25;$env[data;$get[i]]!=];
-    $let[name;$env[data;$get[i];packageName]]
+  $while[$and[$get[n]<25;$env[packages;$get[i]]!=];
+    $let[name;$env[packages;$get[i]]]
     $if[$includes[$toLowerCase[$get[name]];$toLowerCase[$focusedOptionValue]];
       $addChoice[$get[name];$get[name]]
       $letSum[n;1]
