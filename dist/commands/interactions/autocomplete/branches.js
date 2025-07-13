@@ -11,8 +11,9 @@ const Command = {
   $arrayLoad[branches;,;$env[data;mainBranch],$env[data;branches]]
   
   $arrayForEach[branches;branch;
-    $if[$and[$env[branch]!=;$includes[$toLowerCase[$env[branch]];$toLowerCase[$focusedOptionValue]]];
-      $addChoice[$env[branch];$env[branch]]
+    $let[branch;$trim[$env[branch]]]
+    $if[$and[$get[branch]!=;$includes[$toLowerCase[$get[branch]];$toLowerCase[$focusedOptionValue]]];
+      $addChoice[$get[branch];$get[branch]]
     ]
   ]
   $autocomplete
