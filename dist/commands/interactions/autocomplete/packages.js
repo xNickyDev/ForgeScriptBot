@@ -4,10 +4,10 @@ const Command = {
     type: "interactionCreate",
     allowedInteractionTypes: ["autocomplete"],
     code: `
-  $onlyIf[$focusedOptionName==package]
+  $onlyIf[$or[$focusedOptionName==package;$and[$applicationSubCommandName==package;$focusedOptionName==name]]]
   $jsonLoad[packages;$getGlobalVar[packages]]
   
-  $if[$applicationCommandName==search;
+  $if[$and[$applicationCommandName==search;$applicationSubCommandName!=package];
     $arrayMap[packages;package;
       $jsonLoad[pkg;$fetchPackage[$env[package]]]
       $if[$env[pkg;$applicationSubCommandNamesUrl]!=;
