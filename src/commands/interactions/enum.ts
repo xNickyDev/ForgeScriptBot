@@ -5,7 +5,8 @@ const Command: IBaseCommand<CommandType> = {
   allowedInteractionTypes: ["button"],
   code: `
   $arrayLoad[ID; ;$customID]
-  $onlyIf[$arrayAt[ID;0]==enum]
+  $let[id;$arrayAt[ID;0]]
+  $onlyIf[$or[$get[id]==enum;$get[id]==functionEnum]]
   $onlyIf[$authorizingIntegrationOwners[User]==$authorID;$ephemeral Not for you dummy]
   
   $let[name;$arrayAt[ID;1]]
@@ -24,8 +25,12 @@ const Command: IBaseCommand<CommandType> = {
   $jsonLoad[enum;$env[enums;$get[name]]]
   $onlyIf[$env[enum]!=;$ephemeral Invalid Enum Provided!]
   
-  $if[$djsEval[ctx.interaction.message.components.at(0).data.type]==10;
-    $loadComponents[$djsEval[JSON.stringify(ctx.interaction.message.components.at(0).data)]]
+  $if[$get[id]!=enum;
+    $ephemeral
+  ;
+    $if[$djsEval[ctx.interaction.message.components.at(0).data.type]==10;
+      $loadComponents[$djsEval[JSON.stringify(ctx.interaction.message.components.at(0).data)]]
+    ]
   ]
   $addContainer[
     $addTextDisplay[## $get[name]]
@@ -38,7 +43,7 @@ const Command: IBaseCommand<CommandType> = {
     $addButton[enum $get[name] $env[data;packageName] $get[branch] $checkCondition[$get[expand]!=true];$if[$get[expand];Shrink;Expand];Primary]
     $addButton[https://docs.botforge.org/enum/$get[name]?p=$env[data;packageName]&branch=$get[branch];Docs;Link]
   ;$getGlobalVar[main]]
-  $interactionUpdate
+  $if[$get[id]==enum;$interactionUpdate]
   `
 }
 

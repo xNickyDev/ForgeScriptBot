@@ -23,7 +23,7 @@ const ApplicationCommand: IApplicationCommandData = {
       {
         type: ApplicationCommandOptionType.String,
         name: "package",
-        description: "The package you want to search the function from. Default is ForgeScript",
+        description: "The package you want to search the event from. Default is ForgeScript",
         autocomplete: true,
       },
       {
