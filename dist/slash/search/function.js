@@ -60,7 +60,7 @@ const ApplicationCommand = {
   
   $httpSetContentType[Json]
   $!httpRequest[https://raw.githubusercontent.com/$get[repo]/refs/heads/$get[branch]/metadata/functions.json;GET;functions]
-  $jsonLoad[function;$env[functions;$arrayFindIndex[functions;fn;$return[$checkCondition[$env[fn;name]==$get[name]]]]]]
+  $jsonLoad[function;$env[functions;$arrayFindIndex[functions;fn;$return[$checkCondition[$toLowerCase[$env[fn;name]]==$toLowerCase[$get[name]]]]]]]
   
   $onlyIf[$env[function]!=;$ephemeral Invalid Function Provided!]
   $jsonLoad[args;$default[$env[function;args];[\\]]]
