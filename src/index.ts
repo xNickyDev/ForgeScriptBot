@@ -32,11 +32,8 @@ const client: ForgeClient = new ForgeClient({
     ],
     events: [
         "ready",
-        "error",
         "messageCreate",
         "interactionCreate",
-        "guildCreate",
-        "guildDelete",
     ],
     extensions: [
         db

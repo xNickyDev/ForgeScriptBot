@@ -4,12 +4,9 @@ const Function: IForgeFunction = {
   name: "installCmd",
   params: ["package", "target"],
   code: `
-  $let[pkg;$default[$env[package];ForgeScript]]
+  $let[package;$default[$env[package];ForgeScript]]
   
-  $let[status;$httpRequest[$api[packages;packageName=$get[pkg]];GET]]
-  $onlyIf[$get[status]==200;$ephemeral Error Fetching Package!]
-  $jsonLoad[data;$httpResult[data]]
-  
+  $jsonLoad[data;$fetchPackage[$get[package]]]
   $onlyIf[$env[data;id]!=;$ephemeral Invalid Package Provided!]
   $arrayLoad[branches;,;$env[data;mainBranch],$env[data;branches]]
   $let[repo;$env[data;githubPackageOwner]/$env[data;githubPackageName]]
