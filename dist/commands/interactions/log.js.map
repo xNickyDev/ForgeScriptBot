@@ -1,0 +1,1 @@
+{"version":3,"file":"log.js","sourceRoot":"","sources":["../../../src/commands/interactions/log.ts"],"names":[],"mappings":";;AAEA,MAAM,OAAO,GAA8B;IACzC,IAAI,EAAE,mBAAmB;IACzB,uBAAuB,EAAE,CAAC,cAAc,EAAE,aAAa,CAAC;IACxD,IAAI,EAAE,oDAAoD;CAC3D,CAAA;AAED,kBAAe,OAAO,CAAA"}
