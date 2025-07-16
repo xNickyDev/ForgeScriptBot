@@ -35,6 +35,7 @@ var __importStar = (this && this.__importStar) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 const forgescript_1 = require("@tryforge/forgescript");
 const forge_db_1 = require("@tryforge/forge.db");
+const forge_canvas_1 = require("@tryforge/forge.canvas");
 const dotenv = __importStar(require("dotenv"));
 dotenv.config();
 const db = new forge_db_1.ForgeDB({
@@ -68,7 +69,8 @@ const client = new forgescript_1.ForgeClient({
         "interactionCreate",
     ],
     extensions: [
-        db
+        db,
+        new forge_canvas_1.ForgeCanvas()
     ],
 });
 client.commands.add({

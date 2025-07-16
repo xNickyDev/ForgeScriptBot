@@ -1,5 +1,6 @@
 import { ForgeClient } from "@tryforge/forgescript"
 import { ForgeDB } from "@tryforge/forge.db"
+import { ForgeCanvas } from "@tryforge/forge.canvas"
 import * as dotenv from "dotenv"
 
 dotenv.config()
@@ -36,7 +37,8 @@ const client: ForgeClient = new ForgeClient({
         "interactionCreate",
     ],
     extensions: [
-        db
+        db,
+        new ForgeCanvas()
     ],
 })
 
