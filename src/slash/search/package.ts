@@ -74,7 +74,7 @@ const ApplicationCommand: IApplicationCommandData = {
       $arrayPushJSON[lines;$env[obj]]
     ]
     
-    $let[font;40px Microsoft YaHei]
+    $let[font;40px microsoft-yahei]
     $arrayLoad[words; ;$env[data;packageDescription]]
     $arrayLoad[lines]
     $let[i;0]
