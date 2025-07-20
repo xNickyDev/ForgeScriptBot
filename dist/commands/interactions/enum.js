@@ -7,13 +7,15 @@ const Command = {
   $arrayLoad[ID; ;$customID]
   $let[id;$arrayAt[ID;0]]
   $onlyIf[$or[$get[id]==enum;$get[id]==functionEnum]]
-  $onlyIf[$authorizingIntegrationOwners[User]==$authorID;$ephemeral Not for you dummy]
+  $if[$and[$get[id]==enum;$includes[$messageFlags;Ephemeral]==false];
+    $onlyIf[$authorizingIntegrationOwners[User]==$authorID;$ephemeral Not for you dummy]
+  ]
   
   $let[name;$arrayAt[ID;1]]
   $let[package;$arrayAt[ID;2]]
   $let[branch;$arrayAt[ID;3]]
   $let[expand;$arrayAt[ID;-1]]
-
+  
   $jsonLoad[data;$fetchPackage[$get[package]]]
   $onlyIf[$env[data;id]!=;$ephemeral Invalid Package Provided!]
   $onlyIf[$env[data;enumsUrl]!=;$ephemeral This package does not have any enums!]
