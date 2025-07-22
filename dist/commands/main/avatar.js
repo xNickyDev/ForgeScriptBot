@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const Command = {
+const forgescript_1 = require("@tryforge/forgescript");
+exports.default = new forgescript_1.BaseCommand({
     name: "avatar",
     aliases: ["av", "pfp", "picture"],
     description: "Get someone's avatar",
@@ -9,6 +10,5 @@ const Command = {
     code: `
   $avatarCmd[$findUser[$message[0]]]
   `
-};
-exports.default = Command;
+});
 //# sourceMappingURL=avatar.js.map

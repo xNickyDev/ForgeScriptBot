@@ -1,7 +1,7 @@
-import { IApplicationCommandData } from "@tryforge/forgescript"
+import { ApplicationCommand } from "@tryforge/forgescript"
 import { ApplicationCommandOptionType, ApplicationCommandType, ApplicationIntegrationType, InteractionContextType } from "discord.js"
 
-const ApplicationCommand: IApplicationCommandData = {
+export default new ApplicationCommand({
   data: {
     type: ApplicationCommandType.ChatInput,
     name: "changelog",
@@ -70,6 +70,4 @@ const ApplicationCommand: IApplicationCommandData = {
     $addButton[https://docs.botforge.org/?p=$env[data;packageName]&tab=changelog;Full Changelog;Link]
   ;$getGlobalVar[main]]
   `
-}
-
-export default ApplicationCommand
+})

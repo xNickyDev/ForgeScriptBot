@@ -1,7 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+const forgescript_1 = require("@tryforge/forgescript");
 const discord_js_1 = require("discord.js");
-const ApplicationCommand = {
+exports.default = new forgescript_1.ApplicationCommand({
     data: {
         type: discord_js_1.ApplicationCommandType.ChatInput,
         name: "function",
@@ -132,6 +133,5 @@ const ApplicationCommand = {
     $addButton[https://github.com/$get[repo]/tree/$get[branch]/$get[path]$if[$env[function;category]!=;/$env[function;category]]/$replace[$env[function;name];$;].ts;Source;Link]
   ;$getGlobalVar[main]]
   `
-};
-exports.default = ApplicationCommand;
+});
 //# sourceMappingURL=function.js.map

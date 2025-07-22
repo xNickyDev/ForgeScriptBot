@@ -1,6 +1,6 @@
-import { IForgeFunction } from "@tryforge/forgescript"
+import { ForgeFunction } from "@tryforge/forgescript"
 
-const Function: IForgeFunction = {
+export default new ForgeFunction({
   name: "installCmd",
   params: ["package", "target"],
   code: `
@@ -39,6 +39,4 @@ const Function: IForgeFunction = {
     ]
   ;$getGlobalVar[main]]
   `
-}
-
-export default Function
+})

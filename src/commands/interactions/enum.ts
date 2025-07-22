@@ -1,6 +1,6 @@
-import { CommandType, IBaseCommand } from "@tryforge/forgescript"
+import { BaseCommand } from "@tryforge/forgescript"
 
-const Command: IBaseCommand<CommandType> = {
+export default new BaseCommand({
   type: "interactionCreate",
   allowedInteractionTypes: ["button"],
   code: `
@@ -47,6 +47,4 @@ const Command: IBaseCommand<CommandType> = {
   ;$getGlobalVar[main]]
   $if[$get[id]==enum;$interactionUpdate]
   `
-}
-
-export default Command
+})

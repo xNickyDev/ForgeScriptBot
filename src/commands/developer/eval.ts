@@ -1,6 +1,6 @@
-import { CommandType, IBaseCommand } from "@tryforge/forgescript"
+import { BaseCommand } from "@tryforge/forgescript"
 
-const Command: IBaseCommand<CommandType> = {
+export default new BaseCommand({
   name: "eval",
   aliases: ["ev"],
   type: "messageCreate",
@@ -11,6 +11,4 @@ const Command: IBaseCommand<CommandType> = {
   $if[$charCount[$get[result]]>2000;$attachment[$get[result];result.json;true];$get[result]]
   $try[$!addMessageReactions[$channelID;$messageID;✅]]
   `
-}
-
-export default Command
+})

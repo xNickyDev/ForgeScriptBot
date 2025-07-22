@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const Function = {
+const forgescript_1 = require("@tryforge/forgescript");
+exports.default = new forgescript_1.ForgeFunction({
     name: "hasBranch",
     params: ["package", "branch"],
     code: `
@@ -8,6 +9,5 @@ const Function = {
   $arrayLoad[branches;,;$env[pkg;mainBranch],$env[pkg;branches]]
   $return[$and[$env[branch]!=;$arrayIncludes[branches;$toLowerCase[$env[branch]]]]]
   `
-};
-exports.default = Function;
+});
 //# sourceMappingURL=hasBranch.js.map

@@ -1,6 +1,6 @@
-import { IForgeFunction } from "@tryforge/forgescript"
+import { ForgeFunction } from "@tryforge/forgescript"
 
-const Function: IForgeFunction = {
+export default new ForgeFunction({
   name: "avatarCmd",
   params: ["user"],
   code: `
@@ -26,6 +26,4 @@ const Function: IForgeFunction = {
     $addButton[$replace[$get[avatar];$get[ext];.webp];WEBP;Link]
   ;$getGlobalVar[main]]
   `
-}
-
-export default Function
+})

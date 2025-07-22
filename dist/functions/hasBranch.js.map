@@ -1,1 +1,1 @@
-{"version":3,"file":"hasBranch.js","sourceRoot":"","sources":["../../src/functions/hasBranch.ts"],"names":[],"mappings":";;AAEA,MAAM,QAAQ,GAAmB;IAC/B,IAAI,EAAE,WAAW;IACjB,MAAM,EAAE,CAAC,SAAS,EAAE,QAAQ,CAAC;IAC7B,IAAI,EAAE;;;;GAIL;CACF,CAAA;AAED,kBAAe,QAAQ,CAAA"}
+{"version":3,"file":"hasBranch.js","sourceRoot":"","sources":["../../src/functions/hasBranch.ts"],"names":[],"mappings":";;AAAA,uDAAqD;AAErD,kBAAe,IAAI,2BAAa,CAAC;IAC/B,IAAI,EAAE,WAAW;IACjB,MAAM,EAAE,CAAC,SAAS,EAAE,QAAQ,CAAC;IAC7B,IAAI,EAAE;;;;GAIL;CACF,CAAC,CAAA"}

@@ -1,6 +1,6 @@
-import { IForgeFunction } from "@tryforge/forgescript"
+import { ForgeFunction } from "@tryforge/forgescript"
 
-const Function: IForgeFunction = {
+export default new ForgeFunction({
   name: "fetchPackage",
   params: ["name"],
   code: `
@@ -11,6 +11,4 @@ const Function: IForgeFunction = {
   ]
   $return[]
   `
-}
-
-export default Function
+})

@@ -1,7 +1,7 @@
-import { IApplicationCommandData } from "@tryforge/forgescript"
+import { ApplicationCommand } from "@tryforge/forgescript"
 import { ApplicationCommandOptionType, ApplicationCommandType, ApplicationIntegrationType, InteractionContextType } from "discord.js"
 
-const ApplicationCommand: IApplicationCommandData = {
+export default new ApplicationCommand({
   data: {
     type: ApplicationCommandType.ChatInput,
     name: "package",
@@ -200,6 +200,4 @@ const ApplicationCommand: IApplicationCommandData = {
     ]
   ;$getGlobalVar[main]]
   `
-}
-
-export default ApplicationCommand
+})

@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const Command = {
+const forgescript_1 = require("@tryforge/forgescript");
+exports.default = new forgescript_1.BaseCommand({
     type: "ready",
     code: `
   $jsonLoad[statuses;$readFile[data/statuses.json]]
@@ -13,6 +14,5 @@ const Command = {
     $if[$get[n]>=$arrayLength[statuses];$let[n;0]]
   ;1m]
   `
-};
-exports.default = Command;
+});
 //# sourceMappingURL=setStatus.js.map

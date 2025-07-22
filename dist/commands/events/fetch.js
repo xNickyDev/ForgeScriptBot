@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const Command = {
+const forgescript_1 = require("@tryforge/forgescript");
+exports.default = new forgescript_1.BaseCommand({
     type: "ready",
     code: `
   $if[$httpRequest[$api[packages];GET]==200;
@@ -14,6 +15,5 @@ const Command = {
     $setGlobalVar[packages;$env[names]]
   ]
   `
-};
-exports.default = Command;
+});
 //# sourceMappingURL=fetch.js.map

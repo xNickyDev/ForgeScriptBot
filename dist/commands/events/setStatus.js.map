@@ -1,1 +1,1 @@
-{"version":3,"file":"setStatus.js","sourceRoot":"","sources":["../../../src/commands/events/setStatus.ts"],"names":[],"mappings":";;AAEA,MAAM,OAAO,GAA8B;IACzC,IAAI,EAAE,OAAO;IACb,IAAI,EAAE;;;;;;;;;;GAUL;CACF,CAAA;AAED,kBAAe,OAAO,CAAA"}
+{"version":3,"file":"setStatus.js","sourceRoot":"","sources":["../../../src/commands/events/setStatus.ts"],"names":[],"mappings":";;AAAA,uDAAmD;AAEnD,kBAAe,IAAI,yBAAW,CAAC;IAC7B,IAAI,EAAE,OAAO;IACb,IAAI,EAAE;;;;;;;;;;GAUL;CACF,CAAC,CAAA"}

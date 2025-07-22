@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const Command = {
+const forgescript_1 = require("@tryforge/forgescript");
+exports.default = new forgescript_1.BaseCommand({
     name: "install",
     aliases: ["i", "download"],
     description: "How to install any package",
@@ -9,6 +10,5 @@ const Command = {
     code: `
   $installCmd[$message[0];$findUser[$message[1]]]
   `
-};
-exports.default = Command;
+});
 //# sourceMappingURL=install.js.map

@@ -1,6 +1,6 @@
-import { CommandType, IBaseCommand } from "@tryforge/forgescript"
+import { BaseCommand } from "@tryforge/forgescript"
 
-const Command: IBaseCommand<CommandType> = {
+export default new BaseCommand({
   name: "install",
   aliases: ["i", "download"],
   description: "How to install any package",
@@ -9,6 +9,4 @@ const Command: IBaseCommand<CommandType> = {
   code: `
   $installCmd[$message[0];$findUser[$message[1]]]
   `
-}
-
-export default Command
+})

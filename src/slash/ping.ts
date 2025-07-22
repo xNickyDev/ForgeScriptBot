@@ -1,7 +1,7 @@
-import { IApplicationCommandData } from "@tryforge/forgescript"
+import { ApplicationCommand } from "@tryforge/forgescript"
 import { ApplicationCommandType, ApplicationIntegrationType, InteractionContextType } from "discord.js"
 
-const ApplicationCommand: IApplicationCommandData = {
+export default new ApplicationCommand({
   data: {
     type: ApplicationCommandType.ChatInput,
     name: "ping",
@@ -17,6 +17,4 @@ const ApplicationCommand: IApplicationCommandData = {
     ]
   },
   code: `Pong! $pingms`
-}
-
-export default ApplicationCommand
+})

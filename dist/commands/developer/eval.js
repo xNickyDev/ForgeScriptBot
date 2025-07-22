@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const Command = {
+const forgescript_1 = require("@tryforge/forgescript");
+exports.default = new forgescript_1.BaseCommand({
     name: "eval",
     aliases: ["ev"],
     type: "messageCreate",
@@ -11,6 +12,5 @@ const Command = {
   $if[$charCount[$get[result]]>2000;$attachment[$get[result];result.json;true];$get[result]]
   $try[$!addMessageReactions[$channelID;$messageID;✅]]
   `
-};
-exports.default = Command;
+});
 //# sourceMappingURL=eval.js.map

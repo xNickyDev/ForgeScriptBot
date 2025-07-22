@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const Function = {
+const forgescript_1 = require("@tryforge/forgescript");
+exports.default = new forgescript_1.ForgeFunction({
     name: "fetchPackage",
     params: ["name"],
     code: `
@@ -11,6 +12,5 @@ const Function = {
   ]
   $return[]
   `
-};
-exports.default = Function;
+});
 //# sourceMappingURL=fetchPackage.js.map

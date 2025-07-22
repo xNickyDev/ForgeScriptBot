@@ -1,7 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+const forgescript_1 = require("@tryforge/forgescript");
 const discord_js_1 = require("discord.js");
-const ApplicationCommand = {
+exports.default = new forgescript_1.ApplicationCommand({
     data: {
         type: discord_js_1.ApplicationCommandType.ChatInput,
         name: "changelog",
@@ -70,6 +71,5 @@ const ApplicationCommand = {
     $addButton[https://docs.botforge.org/?p=$env[data;packageName]&tab=changelog;Full Changelog;Link]
   ;$getGlobalVar[main]]
   `
-};
-exports.default = ApplicationCommand;
+});
 //# sourceMappingURL=changelog.js.map

@@ -1,6 +1,6 @@
-import { CommandType, IBaseCommand } from "@tryforge/forgescript"
+import { BaseCommand } from "@tryforge/forgescript"
 
-const Command: IBaseCommand<CommandType> = {
+export default new BaseCommand({
   name: "avatar",
   aliases: ["av", "pfp", "picture"],
   description: "Get someone's avatar",
@@ -9,6 +9,4 @@ const Command: IBaseCommand<CommandType> = {
   code: `
   $avatarCmd[$findUser[$message[0]]]
   `
-}
-
-export default Command
+})

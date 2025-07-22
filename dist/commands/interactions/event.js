@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const Command = {
+const forgescript_1 = require("@tryforge/forgescript");
+exports.default = new forgescript_1.BaseCommand({
     type: "interactionCreate",
     allowedInteractionTypes: ["button"],
     code: `
@@ -16,6 +17,5 @@ const Command = {
     $addTextDisplay[-# Made with love by BotForge Team <3]
   ;$getGlobalVar[main]]
   `
-};
-exports.default = Command;
+});
 //# sourceMappingURL=event.js.map

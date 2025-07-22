@@ -1,11 +1,9 @@
-import { CommandType, IBaseCommand } from "@tryforge/forgescript"
+import { BaseCommand } from "@tryforge/forgescript"
 
-const Command: IBaseCommand<CommandType> = {
+export default new BaseCommand({
   type: "ready",
   code: `
   $registerFont[assets/fonts/Gilroy-ExtraBold.ttf]
   $registerFont[assets/fonts/microsoft-yahei.ttf]
   `
-}
-
-export default Command
+})

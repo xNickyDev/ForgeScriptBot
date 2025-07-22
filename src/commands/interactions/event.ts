@@ -1,6 +1,6 @@
-import { CommandType, IBaseCommand } from "@tryforge/forgescript"
+import { BaseCommand } from "@tryforge/forgescript"
 
-const Command: IBaseCommand<CommandType> = {
+export default new BaseCommand({
   type: "interactionCreate",
   allowedInteractionTypes: ["button"],
   code: `
@@ -16,6 +16,4 @@ const Command: IBaseCommand<CommandType> = {
     $addTextDisplay[-# Made with love by BotForge Team <3]
   ;$getGlobalVar[main]]
   `
-}
-
-export default Command
+})

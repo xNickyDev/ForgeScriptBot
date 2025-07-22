@@ -1,11 +1,9 @@
-import { CommandType, IBaseCommand } from "@tryforge/forgescript"
+import { BaseCommand } from "@tryforge/forgescript"
 
-const Command: IBaseCommand<CommandType> = {
+export default new BaseCommand({
   name: "ping",
   description: "Retrieve the bot's ping",
   usage: "ping",
   type: "messageCreate",
   code: `Pong! $pingms`
-}
-
-export default Command
+})

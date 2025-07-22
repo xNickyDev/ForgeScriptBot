@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const Function = {
+const forgescript_1 = require("@tryforge/forgescript");
+exports.default = new forgescript_1.ForgeFunction({
     name: "avatarCmd",
     params: ["user"],
     code: `
@@ -26,6 +27,5 @@ const Function = {
     $addButton[$replace[$get[avatar];$get[ext];.webp];WEBP;Link]
   ;$getGlobalVar[main]]
   `
-};
-exports.default = Function;
+});
 //# sourceMappingURL=avatarCmd.js.map

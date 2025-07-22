@@ -1,6 +1,6 @@
-import { CommandType, IBaseCommand } from "@tryforge/forgescript"
+import { BaseCommand } from "@tryforge/forgescript"
 
-const Command: IBaseCommand<CommandType> = {
+export default new BaseCommand({
   type: "interactionCreate",
   allowedInteractionTypes: ["autocomplete"],
   code: `
@@ -18,6 +18,4 @@ const Command: IBaseCommand<CommandType> = {
   ]
   $autocomplete
   `
-}
-
-export default Command
+})

@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const Command = {
+const forgescript_1 = require("@tryforge/forgescript");
+exports.default = new forgescript_1.BaseCommand({
     type: "interactionCreate",
     allowedInteractionTypes: ["autocomplete"],
     code: `
@@ -28,6 +29,5 @@ const Command = {
   ]
   $autocomplete
   `
-};
-exports.default = Command;
+});
 //# sourceMappingURL=enums.js.map

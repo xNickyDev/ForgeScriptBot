@@ -1,7 +1,7 @@
-import { IApplicationCommandData } from "@tryforge/forgescript"
+import { ApplicationCommand } from "@tryforge/forgescript"
 import { ApplicationCommandOptionType, ApplicationCommandType, ApplicationIntegrationType, InteractionContextType } from "discord.js"
 
-const ApplicationCommand: IApplicationCommandData = {
+export default new ApplicationCommand({
   data: {
     type: ApplicationCommandType.ChatInput,
     name: "avatar",
@@ -26,6 +26,4 @@ const ApplicationCommand: IApplicationCommandData = {
   code: `
   $avatarCmd[$option[user]]
   `
-}
-
-export default ApplicationCommand
+})

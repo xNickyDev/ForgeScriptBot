@@ -1,6 +1,6 @@
-import { CommandType, IBaseCommand } from "@tryforge/forgescript"
+import { BaseCommand } from "@tryforge/forgescript"
 
-const Command: IBaseCommand<CommandType> = {
+export default new BaseCommand({
   type: "ready",
   code: `
   $if[$httpRequest[$api[packages];GET]==200;
@@ -14,6 +14,4 @@ const Command: IBaseCommand<CommandType> = {
     $setGlobalVar[packages;$env[names]]
   ]
   `
-}
-
-export default Command
+})

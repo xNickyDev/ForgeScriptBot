@@ -1,6 +1,6 @@
-import { CommandType, IBaseCommand } from "@tryforge/forgescript"
+import { BaseCommand } from "@tryforge/forgescript"
 
-const Command: IBaseCommand<CommandType> = {
+export default new BaseCommand({
   type: "ready",
   code: `
   $jsonLoad[statuses;$readFile[data/statuses.json]]
@@ -13,6 +13,4 @@ const Command: IBaseCommand<CommandType> = {
     $if[$get[n]>=$arrayLength[statuses];$let[n;0]]
   ;1m]
   `
-}
-
-export default Command
+})

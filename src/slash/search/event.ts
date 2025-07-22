@@ -1,7 +1,7 @@
-import { IApplicationCommandData } from "@tryforge/forgescript"
+import { ApplicationCommand } from "@tryforge/forgescript"
 import { ApplicationCommandOptionType, ApplicationCommandType, ApplicationIntegrationType, InteractionContextType } from "discord.js"
 
-const ApplicationCommand: IApplicationCommandData = {
+export default new ApplicationCommand({
   data: {
     type: ApplicationCommandType.ChatInput,
     name: "event",
@@ -93,6 +93,4 @@ const ApplicationCommand: IApplicationCommandData = {
     $addButton[https://github.com/$get[repo]/tree/$get[branch]/$get[path]/$env[event;name].ts;Source;Link]
   ;$getGlobalVar[main]]
   `
-}
-
-export default ApplicationCommand
+})

@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const Command = {
+const forgescript_1 = require("@tryforge/forgescript");
+exports.default = new forgescript_1.BaseCommand({
     type: "interactionCreate",
     allowedInteractionTypes: ["button"],
     code: `
@@ -47,6 +48,5 @@ const Command = {
   ;$getGlobalVar[main]]
   $if[$get[id]==enum;$interactionUpdate]
   `
-};
-exports.default = Command;
+});
 //# sourceMappingURL=enum.js.map

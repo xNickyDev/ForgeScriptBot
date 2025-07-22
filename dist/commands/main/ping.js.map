@@ -1,1 +1,1 @@
-{"version":3,"file":"ping.js","sourceRoot":"","sources":["../../../src/commands/main/ping.ts"],"names":[],"mappings":";;AAEA,MAAM,OAAO,GAA8B;IACzC,IAAI,EAAE,MAAM;IACZ,WAAW,EAAE,yBAAyB;IACtC,KAAK,EAAE,MAAM;IACb,IAAI,EAAE,eAAe;IACrB,IAAI,EAAE,eAAe;CACtB,CAAA;AAED,kBAAe,OAAO,CAAA"}
+{"version":3,"file":"ping.js","sourceRoot":"","sources":["../../../src/commands/main/ping.ts"],"names":[],"mappings":";;AAAA,uDAAmD;AAEnD,kBAAe,IAAI,yBAAW,CAAC;IAC7B,IAAI,EAAE,MAAM;IACZ,WAAW,EAAE,yBAAyB;IACtC,KAAK,EAAE,MAAM;IACb,IAAI,EAAE,eAAe;IACrB,IAAI,EAAE,eAAe;CACtB,CAAC,CAAA"}
