@@ -4,8 +4,8 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc",
-    "start": "tsc && node dist/index.js"
+    "build": "tsc && cp src/slash/search/config.json dist/slash/search/config.json",
+    "start": "npm run build && node dist/index.js"
   },
   "devDependencies": {
     "typescript": "^5.8.2"

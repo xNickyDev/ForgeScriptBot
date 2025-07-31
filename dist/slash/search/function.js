@@ -38,15 +38,6 @@ exports.default = new forgescript_1.ApplicationCommand({
                 description: "If the reply should be hidden or not",
             },
         ],
-        contexts: [
-            discord_js_1.InteractionContextType.Guild,
-            discord_js_1.InteractionContextType.BotDM,
-            discord_js_1.InteractionContextType.PrivateChannel
-        ],
-        integration_types: [
-            discord_js_1.ApplicationIntegrationType.GuildInstall,
-            discord_js_1.ApplicationIntegrationType.UserInstall
-        ]
     },
     code: `
   $let[name;$option[name]]

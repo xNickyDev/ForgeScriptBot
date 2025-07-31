@@ -1,0 +1,5 @@
+{
+    "description": "Search anything related to ForgeScript and its extesions",
+    "contexts": [0, 1, 2],
+    "integration_types": [0, 1]
+}

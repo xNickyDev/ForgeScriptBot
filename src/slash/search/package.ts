@@ -1,5 +1,5 @@
 import { ApplicationCommand } from "@tryforge/forgescript"
-import { ApplicationCommandOptionType, ApplicationCommandType, ApplicationIntegrationType, InteractionContextType } from "discord.js"
+import { ApplicationCommandOptionType, ApplicationCommandType } from "discord.js"
 
 export default new ApplicationCommand({
   data: {
@@ -25,15 +25,6 @@ export default new ApplicationCommand({
         description: "If the reply should be hidden or not",
       },
     ],
-    contexts: [
-      InteractionContextType.Guild,
-      InteractionContextType.BotDM,
-      InteractionContextType.PrivateChannel
-    ],
-    integration_types: [
-      ApplicationIntegrationType.GuildInstall,
-      ApplicationIntegrationType.UserInstall
-    ]
   },
   code: `
   $let[name;$option[name]]
