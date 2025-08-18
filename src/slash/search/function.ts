@@ -98,7 +98,9 @@ export default new ApplicationCommand({
       $arrayForEach[args;arg;
         $arrayPush[text;### $env[arg;name]$if[$env[arg;required];*]\n> $env[arg;description]\n- Type: \`$if[$env[arg;type]!=Enum;$env[arg;type];$env[arg;enumName]]$if[$env[arg;rest];[\\]]\`]
         $if[$env[arg;type]==Enum;
-          $arrayPushJSON[btns;$env[arg]]
+          $if[$arraySome[btns;btn;$env[btn;enumName]==$env[arg;enumName]]==false;
+            $arrayPushJSON[btns;$env[arg]]
+          ]
         ]
       ]
       $addTextDisplay[$arrayJoin[text;\n]]
