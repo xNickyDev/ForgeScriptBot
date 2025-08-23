@@ -62,12 +62,19 @@ export default new ApplicationCommand({
     $!httpRequest[$get[link];GET;paths]
   ]
   $let[path;$default[$env[paths;events];src/events]]
+
+  $arrayLoad[tags]
+  $if[$env[event;deprecated];$arrayPush[tags;<:deprecated_1:1394004926258089995><:deprecated_2:1394004939914875023><:deprecated_3:1394004950710878238><:deprecated_4:1394004964673720421><:deprecated_5:1394004976564568134>]]
   
   $if[$option[hidden];$ephemeral]
   $if[$option[target]!=;$addTextDisplay[<@$option[target]>]]
   $addContainer[
     $addTextDisplay[## $env[event;name]]
     $addSeparator
+    $if[$arrayLength[tags]>0;
+      $addTextDisplay[$arrayJoin[tags; ]]
+      $addSeparator
+    ]
     $addTextDisplay[$env[event;description]]
     $if[$arrayLength[intents]>0;
       $addTextDisplay[** **\n**Required Intents**\n> -# $arrayJoin[intents]]
