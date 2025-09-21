@@ -10,7 +10,7 @@ exports.default = new forgescript_1.BaseCommand({
     $arrayForEach[pkgs;pkg;
       $let[name;$env[pkg;packageName]]
       $arrayPush[names;$get[name]]
-      $setGlobalVar[$toLowerCase[$get[name]];$env[pkg]]
+      $setGlobalVar[$toLowerCase[$get[name]];$jsonStringify[pkg]]
     ]
     $setGlobalVar[packages;$env[names]]
   ]
