@@ -113,8 +113,7 @@ export default new ApplicationCommand({
     
     $drawText[;fill;$get[install];bold $get[font];#ffffff;$math[$get[width]/2];$math[$get[butY]+50]]
     
-    $let[leadDev;$env[data;leadDev]]
-    $if[$env[data;authorName]==$get[leadDev];
+    $if[$or[$env[data;leadDev]==;$env[data;authorName]==$env[data;leadDev]];
       $let[w;1000]
       $let[h;300]
       $let[x;$math[($get[width]-$get[w])/2]]
@@ -129,13 +128,13 @@ export default new ApplicationCommand({
       $fill[;gradient://author]
       $closePath
       
-      $drawImage[;$env[data;leadDevAvatar];$math[$get[x]+100];$math[$get[y]+($get[h]-150)/2];$math[$get[h]-150];$math[$get[h]-150];$math[$get[width]/2]]
+      $drawImage[;$env[data;authorAvatar];$math[$get[x]+100];$math[$get[y]+($get[h]-150)/2];$math[$get[h]-150];$math[$get[h]-150];$math[$get[width]/2]]
       
       $let[font;50px Gilroy-ExtraBold]
       $textAlign[;left]
       $drawText[;fill;$env[data;authorName];$get[font];#ffffff;$math[$get[x]+$get[h]];$math[$get[y]+($get[h]-40)/2];$math[$get[w]-$get[h]]]
       $let[font;30px Gilroy-ExtraBold]
-      $drawText[;fill;Author & Lead Developer of $env[data;packageName];$get[font];#eabfff;$math[$get[x]+$get[h]];$math[$get[y]+($get[h]+85)/2];$math[$get[w]-$get[h]]]
+      $drawText[;fill;Author $if[$env[data;leadDev]!=;& Lead Developer ]of $env[data;packageName];$get[font];#eabfff;$math[$get[x]+$get[h]];$math[$get[y]+($get[h]+85)/2];$math[$get[w]-$get[h]]]
     ;
       $let[w;700]
       $let[h;300]
@@ -149,33 +148,26 @@ export default new ApplicationCommand({
       $drawRect[;none;;$math[$get[width]/2+100];$get[y];$get[w];$get[h];40]
       $fill[;gradient://author]
       $closePath
-
-      $drawImage[;$env[data;authorAvatar];$math[$get[width]/2-($get[w]+25)];$math[$get[y]+($get[h]-150)/2];$math[$get[h]-150];$math[$get[h]-150];$math[$get[width]/2]]
       
-      $if[$get[leadDev]!=;
-        $beginPath
-        $newLinearGradient[lead;$math[$get[width]/2-($get[w]+100)];$get[y];$math[$get[w]+$get[width]/2-($get[w]+100)];$math[$get[y]+$get[h]];
-          $addColorStop[;0;#552dd0]
-          $addColorStop[;1;#240e6e]
-        ]
-        $drawRect[;none;;$math[$get[width]/2-($get[w]+100)];$get[y];$get[w];$get[h];40]
-        $fill[;gradient://lead]
-        $closePath
-
-        $drawImage[;$env[data;leadDevAvatar];$math[$get[width]/2+175];$math[$get[y]+($get[h]-150)/2];$math[$get[h]-150];$math[$get[h]-150];$math[$get[width]/2]]
+      $beginPath
+      $newLinearGradient[lead;$math[$get[width]/2-($get[w]+100)];$get[y];$math[$get[w]+$get[width]/2-($get[w]+100)];$math[$get[y]+$get[h]];
+        $addColorStop[;0;#552dd0]
+        $addColorStop[;1;#240e6e]
       ]
+      $drawRect[;none;;$math[$get[width]/2-($get[w]+100)];$get[y];$get[w];$get[h];40]
+      $fill[;gradient://lead]
+      $closePath
+      
+      $drawImage[;$env[data;authorAvatar];$math[$get[width]/2-($get[w]+25)];$math[$get[y]+($get[h]-150)/2];$math[$get[h]-150];$math[$get[h]-150];$math[$get[width]/2]]
+      $drawImage[;$env[data;leadDevAvatar];$math[$get[width]/2+175];$math[$get[y]+($get[h]-150)/2];$math[$get[h]-150];$math[$get[h]-150];$math[$get[width]/2]]
       
       $let[font;50px Gilroy-ExtraBold]
       $textAlign[;left]
       $drawText[;fill;$env[data;authorName];$get[font];#ffffff;$math[$get[width]/2-$get[w]+$get[h]-150];$math[$get[y]+($get[h]-40)/2];$math[$get[w]-$get[h]]]
-      $if[$get[leadDev]!=;
-        $drawText[;fill;$get[leadDev];$get[font];#ffffff;$math[$get[width]/2+$get[h]+50];$math[$get[y]+($get[h]-40)/2];$math[$get[w]-$get[h]]]
-      ]
+      $drawText[;fill;$env[data;leadDev];$get[font];#ffffff;$math[$get[width]/2+$get[h]+50];$math[$get[y]+($get[h]-40)/2];$math[$get[w]-$get[h]]]
       $let[font;30px Gilroy-ExtraBold]
       $drawText[;fill;Author of $env[data;packageName];$get[font];#eabfff;$math[$get[width]/2-$get[w]+$get[h]-150];$math[$get[y]+($get[h]+85)/2];$math[$get[w]-$get[h]]]
-      $if[$get[leadDev]!=;
-        $drawText[;fill;Lead Developer of $env[data;packageName];$get[font];#eabfff;$math[$get[width]/2+$get[h]+50];$math[$get[y]+($get[h]+85)/2];$math[$get[w]-$get[h]]]
-      ]
+      $drawText[;fill;Lead Developer of $env[data;packageName];$get[font];#eabfff;$math[$get[width]/2+$get[h]+50];$math[$get[y]+($get[h]+85)/2];$math[$get[w]-$get[h]]]
     ]
   ]
   $attachCanvas[pkg;$env[data;packageName].png]
