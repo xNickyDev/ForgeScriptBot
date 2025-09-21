@@ -5,7 +5,7 @@ import * as dotenv from "dotenv"
 
 dotenv.config()
 
-const db: ForgeDB = new ForgeDB({
+const db = new ForgeDB({
     type: "better-sqlite3",
     events: [
         "connect",
@@ -15,7 +15,7 @@ const db: ForgeDB = new ForgeDB({
     ],
 })
 
-const client: ForgeClient = new ForgeClient({
+const client = new ForgeClient({
     prefixes: [
         ".",
         "f!",

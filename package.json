@@ -13,7 +13,7 @@
   "dependencies": {
     "@tryforge/forge.canvas": "^1.2.3",
     "@tryforge/forge.db": "^2.1.0",
-    "@tryforge/forgescript": "github:tryforge/ForgeScript#dev",
+    "@tryforge/forgescript": "^2.4.1",
     "better-sqlite3": "^11.10.0",
     "dotenv": "^16.4.7",
     "sqlite3": "^5.1.7"
