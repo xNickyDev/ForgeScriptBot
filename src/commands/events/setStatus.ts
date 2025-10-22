@@ -1,7 +1,7 @@
 import { BaseCommand } from "@tryforge/forgescript"
 
 export default new BaseCommand({
-  type: "ready",
+  type: "clientReady",
   code: `
   $jsonLoad[statuses;$readFile[data/statuses.json]]
   $setStatus[online;Custom;$eval[$env[statuses;0];false]]

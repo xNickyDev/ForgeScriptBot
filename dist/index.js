@@ -64,7 +64,7 @@ const client = new forgescript_1.ForgeClient({
         "DirectMessageTyping",
     ],
     events: [
-        "ready",
+        "clientReady",
         "messageCreate",
         "interactionCreate",
     ],
@@ -74,7 +74,7 @@ const client = new forgescript_1.ForgeClient({
     ],
 });
 client.commands.add({
-    type: "ready",
+    type: "clientReady",
     code: `$logger[Info;Ready on client ForgeScriptBot!]`
 });
 forge_db_1.ForgeDB.variables(require("../variables.json"));

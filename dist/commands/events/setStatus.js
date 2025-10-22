@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const forgescript_1 = require("@tryforge/forgescript");
 exports.default = new forgescript_1.BaseCommand({
-    type: "ready",
+    type: "clientReady",
     code: `
   $jsonLoad[statuses;$readFile[data/statuses.json]]
   $setStatus[online;Custom;$eval[$env[statuses;0];false]]

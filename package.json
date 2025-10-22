@@ -12,8 +12,8 @@
   },
   "dependencies": {
     "@tryforge/forge.canvas": "^1.2.3",
-    "@tryforge/forge.db": "^2.1.0",
-    "@tryforge/forgescript": "^2.4.1",
+    "@tryforge/forge.db": "^2.1.1",
+    "@tryforge/forgescript": "^2.5.0",
     "better-sqlite3": "^11.10.0",
     "dotenv": "^16.4.7",
     "sqlite3": "^5.1.7"

@@ -1,7 +1,7 @@
 import { BaseCommand } from "@tryforge/forgescript"
 
 export default new BaseCommand({
-  type: "ready",
+  type: "clientReady",
   code: `
   $if[$httpRequest[$api[packages];GET]==200;
     $jsonLoad[pkgs;$httpResult[data]]
