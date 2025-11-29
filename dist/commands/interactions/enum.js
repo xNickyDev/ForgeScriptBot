@@ -31,8 +31,8 @@ exports.default = new forgescript_1.BaseCommand({
   $if[$get[id]!=enum;
     $ephemeral
   ;
-    $if[$djsEval[ctx.interaction.message.components.at(0).data.type]==10;
-      $loadComponents[$djsEval[JSON.stringify(ctx.interaction.message.components.at(0).data)]]
+    $if[$getComponents[$channelID;$messageID;0;;type]==TextDisplay;
+      $loadComponents[$getComponents[$channelID;$messageID;0]]
     ]
   ]
   $addContainer[
