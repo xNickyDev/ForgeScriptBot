@@ -9,6 +9,6 @@ export default new ForgeFunction({
   $if[$arrayIncludes[packages;$get[name]];
     $return[$getGlobalVar[$get[name]]]
   ]
-  $return[]
+  $return
   `
 })

@@ -10,7 +10,7 @@ exports.default = new forgescript_1.ForgeFunction({
   $if[$arrayIncludes[packages;$get[name]];
     $return[$getGlobalVar[$get[name]]]
   ]
-  $return[]
+  $return
   `
 });
 //# sourceMappingURL=fetchPackage.js.map
