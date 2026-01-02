@@ -1,1 +1,1 @@
-{"version":3,"file":"fetch.js","sourceRoot":"","sources":["../../../src/commands/events/fetch.ts"],"names":[],"mappings":";;AAAA,uDAAmD;AAEnD,kBAAe,IAAI,yBAAW,CAAC;IAC7B,IAAI,EAAE,aAAa;IACnB,IAAI,EAAE;;;;;;;;;;;GAWL;CACF,CAAC,CAAA"}
+{"version":3,"file":"fetch.js","sourceRoot":"","sources":["../../../src/commands/events/fetch.ts"],"names":[],"mappings":";;AAAA,uDAAmD;AAEnD,kBAAe,IAAI,yBAAW,CAAC;IAC7B,IAAI,EAAE,aAAa;IACnB,IAAI,EAAE;;;;;;;;;;;;;GAaL;CACF,CAAC,CAAA"}
