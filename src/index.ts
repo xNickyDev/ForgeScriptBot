@@ -1,9 +1,9 @@
 import { ForgeClient } from "@tryforge/forgescript"
 import { ForgeDB } from "@tryforge/forge.db"
 import { ForgeCanvas } from "@tryforge/forge.canvas"
-import * as dotenv from "dotenv"
+import { config } from "dotenv"
 
-dotenv.config()
+config()
 
 const db = new ForgeDB({
     type: "better-sqlite3",

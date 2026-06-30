@@ -1,21 +1,25 @@
 {
   "name": "forge.bot",
   "version": "1.0.0",
-  "description": "",
+  "description": "ForgeBot copy written in ForgeScript.",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc && cp src/slash/search/config.json dist/slash/search/config.json",
     "start": "npm run build && node dist/index.js"
   },
+  "author": {
+    "name": "xNickyDev",
+    "url": "https://github.com/xNickyDev/"
+  },
   "devDependencies": {
-    "typescript": "^5.8.2"
+    "typescript": "^6.0.2"
   },
   "dependencies": {
     "@tryforge/forge.canvas": "^1.2.3",
     "@tryforge/forge.db": "^2.1.1",
-    "@tryforge/forgescript": "^2.5.0",
-    "better-sqlite3": "^11.10.0",
-    "dotenv": "^16.4.7",
-    "sqlite3": "^5.1.7"
+    "@tryforge/forgescript": "github:tryforge/ForgeScript#dev",
+    "better-sqlite3": "^12.9.0",
+    "dotenv": "^17.4.2",
+    "sqlite3": "^6.0.1"
   }
 }
